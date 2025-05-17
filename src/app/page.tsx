@@ -1,22 +1,14 @@
-import Image from 'next/image'
 import Link from 'next/link'
+import HeroSlider from '@/components/HeroSlider'
 
 export default function Home(): React.ReactElement {
   return (
     <main className="min-h-screen">
       {/* ヒーローセクション */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        {/* 背景画像 */}
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="https://images.unsplash.com/photo-1501612780327-45045538702b?q=80&w=2070&auto=format&fit=crop"
-            alt="Caccia band performing live"
-            fill
-            priority
-            className="object-cover"
-            sizes="100vw"
-          />
-        </div>
+        {/* 背景画像スライダー */}
+        <HeroSlider interval={6000} />
+        
         {/* オーバーレイ */}
         <div className="absolute inset-0 bg-black bg-opacity-60 z-0"></div>
         <div className="content-container relative z-10 text-center">
@@ -78,8 +70,8 @@ export default function Home(): React.ReactElement {
               <h3 className="text-xl font-bold">Tech Rock Festivalの出演が決定</h3>
               <p className="text-sm text-gray-300">2025年5月17日</p>
               <p className="mt-2">
-                6月から始まる全国ツアー「IGNITE」の開催が決定しました。
-                東京、大阪、名古屋、福岡など全10都市を回ります。チケット販売は来週開始！
+                11月開催予定のTech Rock FestivalにCacciaの出演が決定！
+                参加はConnpassページの公開をお待ちください。
               </p>
             </div>
           </div>
